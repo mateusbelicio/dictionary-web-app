@@ -1,0 +1,36 @@
+.word-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.word-info__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.word-info__title {
+  font-size: 2rem;
+  font-weight: 700;
+
+  transition: font-size 0.3s;
+}
+
+.word-info__phonetic {
+  font-size: 1.125rem;
+  color: var(--clr-accent-400);
+
+  transition: font-size 0.3s;
+}
+
+@media only screen and (min-width: 40em) {
+  .word-info__title {
+    font-size: 4rem;
+  }
+
+  .word-info__phonetic {
+    font-size: 1.5rem;
+  }
+}
