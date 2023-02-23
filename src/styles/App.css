@@ -1,0 +1,43 @@
+header {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  row-gap: 1.5rem;
+
+  padding-block: 1.5rem 1rem;
+}
+
+header > img {
+  height: 2rem;
+}
+
+@media only screen and (min-width: 40em) {
+  header {
+    row-gap: 3.25rem;
+    padding-block: 3.625rem 2.75rem;
+  }
+
+  header > img {
+    height: auto;
+    width: 2rem;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1.625rem;
+
+  justify-self: end;
+}
+
+.vertical-bar {
+  display: inline-block;
+  width: 1px;
+  height: 2rem;
+  background-color: var(--clr-line);
+}
+
+.search-bar {
+  grid-column: 1 / -1;
+}
