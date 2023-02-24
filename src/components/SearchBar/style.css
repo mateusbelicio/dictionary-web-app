@@ -33,6 +33,7 @@
 
 .search-bar__input::placeholder {
   opacity: 0.25;
+  text-transform: none;
 }
 
 .search-bar__input[data-valid='false'] {

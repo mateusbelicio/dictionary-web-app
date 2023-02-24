@@ -14,6 +14,7 @@
 .word-info__title {
   font-size: 2rem;
   font-weight: 700;
+  line-height: 1;
 
   transition: font-size 0.3s;
 }

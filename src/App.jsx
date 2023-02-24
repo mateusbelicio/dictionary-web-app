@@ -5,6 +5,8 @@ import ControlTheme from './components/ControlTheme';
 import ControlFont from './components/ControlFont';
 import SearchBar from './components/SearchBar';
 import WordInfo from './components/WordInfo';
+import NotFound from './components/NotFound';
+import Loader from './components/Loader';
 
 import './styles/App.css';
 
@@ -13,6 +15,14 @@ export default function App() {
 
   const [valid, setValid] = useState(true);
   const [wordData, setWordData] = useState({});
+  const [mainState, setMainState] = useState();
+
+  const mainStates = {
+    blank: <div></div>,
+    error: <NotFound />,
+    main: <WordInfo word={wordData} />,
+    loading: <Loader />,
+  };
 
   const validateInput = function (e) {
     e.preventDefault();
@@ -21,6 +31,7 @@ export default function App() {
     if (searchInput.value === '') {
       setValid(false);
       setWordData(undefined);
+      setMainState('blank');
     } else {
       setValid(true);
       getWordData(searchInput.value);
@@ -29,22 +40,26 @@ export default function App() {
 
   const getWordData = async function (word) {
     try {
+      setMainState('loading');
+
       const response = await fetch(API_URL + word);
+
       if (!response.ok) throw new Error(`⚠️ Error (${response.status})`);
 
       const [data] = await response.json();
       const structuredData = {
         word: data.word,
-        phonetic: data.phonetic,
+        phonetic: data.phonetic || data.phonetics.filter((phonetic) => phonetic.text)[0].text,
         audio: data.phonetics.filter((phonetic) => phonetic.audio !== '')[0].audio,
         meanings: data.meanings,
         source: data.sourceUrls[0],
       };
 
       setWordData(structuredData);
+      setMainState('main');
     } catch (error) {
-      console.error(error);
-      setWordData(undefined);
+      console.warn(error);
+      setMainState('error');
     }
   };
 
@@ -70,7 +85,7 @@ export default function App() {
           <SearchBar valid={valid} />
         </form>
       </header>
-      <main>{wordData ? <WordInfo word={wordData} /> : <div></div>}</main>
+      <main>{mainStates[mainState]}</main>
     </>
   );
 }

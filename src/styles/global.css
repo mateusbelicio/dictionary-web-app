@@ -97,7 +97,7 @@ body {
   width: 100%;
 
   font-family: var(--font);
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.3333;
   text-rendering: optimizeSpeed;
@@ -111,6 +111,8 @@ body {
 @media only screen and (min-width: 40em) {
   body {
     --padding: 2.5rem;
+
+    font-size: 1.125rem;
   }
 }
 
@@ -126,12 +128,6 @@ blockquote,
 dl,
 dd {
   margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[class],
-ol[class] {
-  list-style: none;
 }
 
 /* Set core root defaults */
