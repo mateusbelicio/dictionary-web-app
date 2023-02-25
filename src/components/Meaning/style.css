@@ -115,9 +115,12 @@
     font-size: 1.25rem;
   }
 
+  .meaning__relation-container {
+    font-size: 1.25rem;
+  }
+
   .meaning__relation-container:first-of-type {
     margin-top: 2.625rem;
-    font-size: 1.25rem;
   }
 
   .meaning__list {
