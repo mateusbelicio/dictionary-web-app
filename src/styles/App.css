@@ -8,8 +8,10 @@ header {
 
   position: sticky;
   top: 0;
-  background: linear-gradient(to bottom, var(--clr-bg), var(--clr-bg) 90%, transparent 100%);
+  background-color: var(--clr-bg);
   z-index: 5;
+
+  transition: background-color 0.5s ease-out;
 }
 
 header > img {
