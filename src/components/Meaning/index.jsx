@@ -18,14 +18,14 @@ export default function Meaning(props) {
       {props.synonyms.length > 0 && (
         <div className='meaning__relation-container'>
           <p className='meaning__relation-title'>Synonyms</p>
-          <p className='meaning__relation-word'>{props.synonyms.join(', ')}</p>
+          <p className='meaning__relation-words'>{props.synonyms.join(', ')}</p>
         </div>
       )}
 
       {props.antonyms.length > 0 && (
         <div className='meaning__relation-container'>
           <p className='meaning__relation-title'>Antonyms</p>
-          <p className='meaning__relation-word'>{props.antonyms.join(', ')}</p>
+          <p className='meaning__relation-words'>{props.antonyms.join(', ')}</p>
         </div>
       )}
     </section>

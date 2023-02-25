@@ -14,15 +14,22 @@ export default function WordInfo(props) {
         <AudioPlayer src={props.word?.audio} />
       </div>
 
-      {props.word.meanings.map((meaning) => (
+      {props.word.meanings.map((meaning, index) => (
         <Meaning
-          key={meaning.partOfSpeech}
+          key={meaning.partOfSpeech + index}
           name={meaning.partOfSpeech}
           definitions={meaning.definitions}
           synonyms={meaning.synonyms}
           antonyms={meaning.antonyms}
         />
       ))}
+
+      <div className='word-info__source'>
+        <p className='word-info__source-title'>Source</p>
+        <a href={props.word.source} target='_blank' className='word-info__link'>
+          {props.word.source}
+        </a>
+      </div>
     </>
   );
 }
