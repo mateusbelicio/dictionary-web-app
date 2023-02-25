@@ -63,15 +63,6 @@ export default function App() {
     }
   };
 
-  /////////////////////////////////////////////////////////////
-  // Only for demo
-
-  useEffect(function () {
-    getWordData('keyboard');
-  }, []);
-
-  /////////////////////////////////////////////////////////////
-
   return (
     <>
       <header>
