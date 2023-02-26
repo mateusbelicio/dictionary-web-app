@@ -5,13 +5,6 @@ header {
   row-gap: 1.5rem;
 
   padding-block: 1.5rem 1rem;
-
-  position: sticky;
-  top: 0;
-  background-color: var(--clr-bg);
-  z-index: 5;
-
-  transition: background-color 0.5s ease-out;
 }
 
 header > img {
