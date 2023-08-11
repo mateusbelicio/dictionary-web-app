@@ -1,19 +1,18 @@
-# Frontend Mentor - Dictionary web app solution
-
-![Design preview for the Dictionary web app coding challenge](./src/assets/images/preview.jpg)
+<div align="center">
+  <img align="right" src="https://www.frontendmentor.io/static/images/logo-mobile.svg" alt="Frontendmentor icon" />
+  <h2 align="left">Frontend Mentor - Dictionary web app solution</h2>
+</div>
 
 This is a solution to the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of contents
+<!-- ![My Profile](https://img.shields.io/badge/Status-building-blue?style=flat) -->
+![My Profile](https://img.shields.io/badge/Status-finished-green?style=flat)
+&dot;
+[![Status](https://img.shields.io/website?label=Website&down_color=inactive&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fmateusbelicio.github.io/dictionary-web-app)](https://mateusbelicio.github.io/dictionary-web-app) 
+&dot;
+[![My Profile](https://img.shields.io/badge/Profile-Mateus_Belicio-282C2E?style=flat&logo=frontendmentor)](https://www.frontendmentor.io/profile/mateusbelicio)
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-- [Author](#author)
-
-## Overview
+---
 
 ### The challenge
 
@@ -27,14 +26,11 @@ Users should be able to:
 - Switch between light and dark themes
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
+- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences.
 
-### Links
+### Screenshot
 
-- 🔗 [Solution URL](https://github.com/mateusbelicio/dictionary-web-app)
-- 🔗 [Live Site URL](https://mateusbelicio.github.io/dictionary-web-app/)
-
-## My process
+![](./public/desktop-preview.png)
 
 ### Built with
 
@@ -45,7 +41,9 @@ Users should be able to:
 - Mobile-first workflow
 - ReactJS
 
-## Author
+---
+
+### Author
 
 - Frontend Mentor - [@mateusbelicio](https://www.frontendmentor.io/profile/mateusbelicio)
 - Linkedin - [@mateusbelicio](https://www.linkedin.com/in/mateusbelicio)
