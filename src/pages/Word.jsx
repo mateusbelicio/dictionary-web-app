@@ -1,6 +1,4 @@
-import { redirect } from 'react-router-dom';
-
-const API_URL = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
+import { fetchWord } from '../utils/fetchWord';
 
 function Word() {
   return <div>WORD</div>;
@@ -8,16 +6,9 @@ function Word() {
 
 export default Word;
 
-export async function loader({ params }) {
-  try {
-    const res = await fetch(API_URL + params.word);
-    if (!res.ok) throw new Error('Not found');
-    const data = await res.json();
+export async function loader({ request }) {
+  const url = new URL(request.url);
+  const queryTerm = url.searchParams.get('q');
 
-    console.log(data);
-
-    return data;
-  } catch (error) {
-    return redirect('/not-found');
-  }
+  return fetchWord(queryTerm);
 }

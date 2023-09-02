@@ -2,8 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   html {
-    color-scheme: light dark;
-
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -34,6 +32,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /* COLOR THEME */
+  html,
   html[data-theme='light'] {
     --clr-bg: var(--clr-neutral-100);
     --clr-body: var(--clr-neutral-600);
@@ -44,6 +43,8 @@ const GlobalStyles = createGlobalStyle`
 
     --shadow: 0 5px 1.875rem rgba(0, 0, 0, 0.1);
     --dropbox-bg: var(--clr-neutral-100);
+
+    --font: var(--ff-serif);
   }
 
   html[data-theme='dark'] {
@@ -78,6 +79,8 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    transition: color 0.3s, background-color 0.3s;
   }
 
   #root {

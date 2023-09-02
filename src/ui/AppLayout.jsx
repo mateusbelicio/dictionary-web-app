@@ -5,7 +5,7 @@ import Header from './Header';
 
 const StyledAppLayout = styled.div`
   --max-width: 46rem;
-  --min-width: 20rem;
+  --min-width: 15rem;
   --padding: 1.5rem;
 
   display: grid;

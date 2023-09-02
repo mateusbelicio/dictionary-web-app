@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import emoji from '/src/assets/images/icon-emoji.svg';
-
 const StyledPageNotFound = styled.div`
   display: grid;
   justify-items: center;
@@ -37,7 +35,7 @@ const StyledPageNotFound = styled.div`
 function PageNotFound() {
   return (
     <StyledPageNotFound className="not-found">
-      <img className="not-found__icon" src={emoji} alt="" aria-hidden="true" />
+      <img className="not-found__icon" src="" alt="" aria-hidden="true" />
       <h1 className="not-found__title">No Definitions Found</h1>
       <p className="not-found__message">
         Sorry pal, we couldn't find definitions for the word you were looking for. You can try the

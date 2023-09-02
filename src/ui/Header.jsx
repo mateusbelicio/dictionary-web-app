@@ -1,30 +1,31 @@
 import styled from 'styled-components';
 
+import Logo from './Logo';
+import Row from './Row';
+import Search from './Search';
+
 const StyledHeader = styled.header`
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  align-items: center;
-  row-gap: 1.5rem;
-
   padding-block: 1.5rem 1rem;
-
-  & > img {
-    height: 2rem;
-  }
+  display: block;
 
   @media only screen and (min-width: 40em) {
     row-gap: 3.25rem;
     padding-block: 3.625rem 2.75rem;
-
-    & > img {
-      height: auto;
-      width: 2rem;
-    }
   }
 `;
 
 function Header() {
-  return <StyledHeader>HEADER</StyledHeader>;
+  return (
+    <StyledHeader>
+      <Row type="vertical">
+        <Row spaceBetween={true}>
+          <Logo />
+          <span>Controls</span>
+        </Row>
+        <Search />
+      </Row>
+    </StyledHeader>
+  );
 }
 
 export default Header;
