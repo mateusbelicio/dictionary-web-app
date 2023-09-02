@@ -8,23 +8,17 @@ const Row = styled.div`
   ${({ type }) =>
     type === 'horizontal' &&
     css`
-      align-items: center;
+      justify-content: space-between;
     `};
   ${({ type }) =>
     type === 'vertical' &&
     css`
       flex-direction: column;
     `};
-  ${({ spaceBetween }) =>
-    spaceBetween &&
-    css`
-      justify-content: space-between;
-    `};
 `;
 
 Row.defaultProps = {
   type: 'horizontal',
-  spaceBetween: false,
 };
 
 export default Row;

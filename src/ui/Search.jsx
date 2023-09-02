@@ -1,8 +1,8 @@
-import { Form, useFetcher, useNavigate, useSubmit } from 'react-router-dom';
+import { useState } from 'react';
+import { useSubmit } from 'react-router-dom';
 import styled from 'styled-components';
 
 import icons from '/icons.svg';
-import { useState } from 'react';
 
 const StyledSearch = styled.form`
   --padding-left: 1.5rem;
@@ -98,8 +98,8 @@ const StyledSearch = styled.form`
   }
 `;
 
-function Search({ valid }) {
-  const [query, setQuery] = useState();
+function Search() {
+  const [query, setQuery] = useState('');
   const [isInvalid, setIsInvalid] = useState(false);
   const submit = useSubmit();
 
@@ -128,7 +128,7 @@ function Search({ valid }) {
         value={query}
         onChange={handleInputChange}
         placeholder="Search for any word..."
-        data-invalid={valid}
+        data-invalid={isInvalid}
       />
       <button type="submit">
         <svg>

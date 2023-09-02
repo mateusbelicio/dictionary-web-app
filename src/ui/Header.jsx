@@ -3,13 +3,22 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import Row from './Row';
 import Search from './Search';
+import Controls from './Controls';
 
 const StyledHeader = styled.header`
-  padding-block: 1.5rem 1rem;
-  display: block;
+  background-color: var(--clr-bg);
+  color: var(--clr-title);
+  display: grid;
+  grid-template-columns: initial;
+  padding-block: 1.5rem;
+  row-gap: 1.5rem;
+
+  @media only screen and (min-width: 32em) {
+    row-gap: 3.25rem;
+    padding-block: 3.625rem 3.125rem;
+  }
 
   @media only screen and (min-width: 40em) {
-    row-gap: 3.25rem;
     padding-block: 3.625rem 2.75rem;
   }
 `;
@@ -17,13 +26,11 @@ const StyledHeader = styled.header`
 function Header() {
   return (
     <StyledHeader>
-      <Row type="vertical">
-        <Row spaceBetween={true}>
-          <Logo />
-          <span>Controls</span>
-        </Row>
-        <Search />
+      <Row>
+        <Logo />
+        <Controls />
       </Row>
+      <Search />
     </StyledHeader>
   );
 }

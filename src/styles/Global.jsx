@@ -35,11 +35,13 @@ const GlobalStyles = createGlobalStyle`
   html,
   html[data-theme='light'] {
     --clr-bg: var(--clr-neutral-100);
-    --clr-body: var(--clr-neutral-600);
+    --clr-title: var(--clr-neutral-600);
+    --clr-body: var(--clr-neutral-400);
     --clr-input: var(--clr-neutral-200);
     --clr-highlight: var(--clr-accent-400);
     --clr-line: var(--clr-neutral-300);
     --clr-gray: var(--clr-neutral-400);
+    --clr-backdrop: rgba(0, 0, 0, 0.1);
 
     --shadow: 0 5px 1.875rem rgba(0, 0, 0, 0.1);
     --dropbox-bg: var(--clr-neutral-100);
@@ -49,11 +51,13 @@ const GlobalStyles = createGlobalStyle`
 
   html[data-theme='dark'] {
     --clr-bg: var(--clr-neutral-800);
-    --clr-body: var(--clr-neutral-100);
+    --clr-title: var(--clr-neutral-100);
+    --clr-body: var(--clr-neutral-400);
     --clr-input: var(--clr-neutral-700);
     --clr-highlight: var(--clr-accent-400);
     --clr-line: var(--clr-neutral-500);
     --clr-gray: var(--clr-neutral-400);
+    --clr-backdrop: rgba(255, 255, 255, 0.1);
 
     --shadow: 0 5px 1.875rem var(--clr-accent-400);
     --dropbox-bg: var(--clr-neutral-700);

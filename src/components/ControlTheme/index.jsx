@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './style.css';
 
-import iconMoon from '/src/assets/images/icon-moon.svg';
-import iconMoonHighlight from '/src/assets/images/icon-moon-highlight.svg';
+// import iconMoon from '/src/assets/images/icon-moon.svg';
+// import iconMoonHighlight from '/src/assets/images/icon-moon-highlight.svg';
 
 export default function ControlTheme() {
   const htmlElement = document.querySelector('html');
@@ -42,17 +42,17 @@ export default function ControlTheme() {
   }, []);
 
   return (
-    <div className='control-theme' data-checked={buttonState}>
-      <input className='control-theme__input' type='checkbox' id='theme' onChange={toggleTheme} />
-      <label className='control-theme__label' htmlFor='theme'>
-        <span className='sr-only'>Toggle dark mode</span>
+    <div className="control-theme" data-checked={buttonState}>
+      <input className="control-theme__input" type="checkbox" id="theme" onChange={toggleTheme} />
+      <label className="control-theme__label" htmlFor="theme">
+        <span className="sr-only">Toggle dark mode</span>
       </label>
-      <img
+      {/* <img
         className='control-theme__icon'
         src={buttonState ? iconMoonHighlight : iconMoon}
         alt=''
         aria-hidden='true'
-      />
+      /> */}
     </div>
   );
 }

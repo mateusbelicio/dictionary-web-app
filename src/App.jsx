@@ -1,19 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-
-import logo from '/src/assets/images/logo.svg';
-
-import ControlTheme from './components/ControlTheme';
-import ControlFont from './components/ControlFont';
-import SearchBar from './components/SearchBar';
-import WordInfo from './components/WordInfo';
-import Loader from './components/Loader';
-
 import './styles/App.css';
+
 import AppLayout from './ui/AppLayout';
 import Home from './pages/Home';
 import Word, { loader as wordLoader } from './pages/Word';
 import PageNotFound from './pages/PageNotFound';
+import ContextsProvider from './contexts';
 
 const router = createBrowserRouter(
   [
@@ -21,8 +13,7 @@ const router = createBrowserRouter(
       element: <AppLayout />,
       children: [
         { path: '', element: <Home /> },
-        { path: '/:word', element: <Word />, loader: wordLoader },
-        { path: 'not-found', element: <PageNotFound /> },
+        { path: 'search', element: <Word />, loader: wordLoader, errorElement: <PageNotFound /> },
       ],
     },
   ],
@@ -30,7 +21,11 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <ContextsProvider>
+      <RouterProvider router={router} />;
+    </ContextsProvider>
+  );
 }
 
 export default App;
