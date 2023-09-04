@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { useRouteError } from 'react-router-dom';
-import { AlertTriangle, Frown } from 'lucide-react';
+import { Link, useRouteError } from 'react-router-dom';
+import { Frown } from 'lucide-react';
 
 const StyledPageNotFound = styled.div`
   display: flex;
@@ -9,7 +9,11 @@ const StyledPageNotFound = styled.div`
   text-align: center;
   row-gap: 1.5rem;
 
+  max-width: var(--max-width);
+
   padding-block: 4rem;
+  padding-inline: 0.875rem;
+  margin-inline: auto;
 
   svg {
     display: block;
@@ -37,7 +41,18 @@ const StyledPageNotFound = styled.div`
     }
 
     p {
-      padding-inline: 0.875rem;
+      & > :not(:first-child) {
+        margin-left: 1ch;
+      }
+    }
+
+    a {
+      color: var(--clr-accent-400);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 `;
@@ -45,21 +60,29 @@ const StyledPageNotFound = styled.div`
 const initialErrorState = {
   title: 'Unknown Error',
   message: 'Sorry, something went very wrong!',
-  resolution: 'Try again later.',
+  resolution: 'Head over to the homepage or go back to previous page.',
 };
 
 function PageNotFound() {
   const routeError = useRouteError();
 
-  const title = routeError?.title || initialErrorState.title;
-  const message = routeError?.message || initialErrorState.message;
+  const message = routeError?.message || routeError?.error?.message || initialErrorState.message;
   const resolution = routeError?.resolution || initialErrorState.resolution;
+  const title =
+    routeError?.title ||
+    [routeError?.status, routeError?.statusText].join(' - ') ||
+    initialErrorState.title;
 
   return (
     <StyledPageNotFound>
       <Frown color="#a445ed" strokeWidth={1.5} />
       <h1>{title}</h1>
-      <p>{[message, resolution].join(' ')}</p>
+      <p>
+        <span>{message}</span>
+        <span>{resolution}</span>
+      </p>
+
+      {title !== 'No Definitions Found' && <Link to={-1}>Go back</Link>}
     </StyledPageNotFound>
   );
 }

@@ -11,6 +11,9 @@ const GlobalStyles = createGlobalStyle`
 
   /* CUSTOM PROPERTIES */
   :root {
+    --max-width: 46rem;
+    --min-width: 15rem;
+
     --clr-neutral-100: #ffffff;
     --clr-neutral-200: #f4f4f4;
     --clr-neutral-300: #e9e9e9;
@@ -45,8 +48,6 @@ const GlobalStyles = createGlobalStyle`
 
     --shadow: 0 5px 1.875rem rgba(0, 0, 0, 0.1);
     --dropbox-bg: var(--clr-neutral-100);
-
-    --font: var(--ff-serif);
   }
 
   html[data-theme='dark'] {
@@ -64,12 +65,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /* FONT THEME */
-  html[data-font='sans'] {
-    --font: var(--ff-sans);
-  }
-
+  html,
   html[data-font='serif'] {
     --font: var(--ff-serif);
+  }
+
+  html[data-font='sans'] {
+    --font: var(--ff-sans);
   }
 
   html[data-font='mono'] {

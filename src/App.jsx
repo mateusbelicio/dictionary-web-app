@@ -11,6 +11,7 @@ const router = createBrowserRouter(
   [
     {
       element: <AppLayout />,
+      errorElement: <PageNotFound />,
       children: [
         { path: '', element: <Home /> },
         { path: 'search', element: <Word />, loader: wordLoader, errorElement: <PageNotFound /> },
@@ -23,7 +24,7 @@ const router = createBrowserRouter(
 function App() {
   return (
     <ContextsProvider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </ContextsProvider>
   );
 }
