@@ -1,12 +1,22 @@
 import { useLoaderData, useNavigation } from 'react-router-dom';
+import { styled } from 'styled-components';
 
 import { fetchWord } from '../utils/fetchWord';
 import { getStructuredWordData } from '../utils/getStructuredWordData';
 
 import Loader from '../ui/Loader';
-import AudioPlayer from '../components/AudioPlayer';
-import Meaning from '../components/Meaning';
-import Row from '../ui/Row';
+import WordHeader from '../feature/word/WordHeader';
+import WordMeaningSection from '../feature/word/WordMeaningSection';
+import WordSource from '../feature/word/WordSource';
+
+const StyledWord = styled.main`
+  display: grid;
+  row-gap: 2rem;
+
+  @media (min-width: 40em) {
+    row-gap: 2.5rem;
+  }
+`;
 
 function Word() {
   const wordData = useLoaderData();
@@ -14,36 +24,15 @@ function Word() {
 
   if (state === 'loading') return <Loader />;
 
-  const structuredData = getStructuredWordData(wordData);
-  console.log(structuredData);
-
+  const { word, phonetic, audio, meanings, source } = getStructuredWordData(wordData);
   return (
-    <>
-      <Row className="word-info">
-        <div className="word-info__heading">
-          <h1 className="word-info__title">{structuredData.word}</h1>
-          <span className="word-info__phonetic">{structuredData.phonetic}</span>
-        </div>
-        <AudioPlayer src={structuredData.audio} />
-      </Row>
-
-      {structuredData.meanings.map((meaning, index) => (
-        <Meaning
-          key={meaning.partOfSpeech + index}
-          name={meaning.partOfSpeech}
-          definitions={meaning.definitions}
-          synonyms={meaning.synonyms}
-          antonyms={meaning.antonyms}
-        />
+    <StyledWord>
+      <WordHeader word={word} phonetic={phonetic} audioSrc={audio} />
+      {meanings.map((meaning, index) => (
+        <WordMeaningSection key={index} meaning={meaning} />
       ))}
-
-      <div className="word-info__source">
-        <p className="word-info__source-title">Source</p>
-        <a href={structuredData.source} target="_blank" className="word-info__link">
-          {structuredData.source}
-        </a>
-      </div>
-    </>
+      <WordSource src={source} />
+    </StyledWord>
   );
 }
 

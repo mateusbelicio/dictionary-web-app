@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
     --clr-neutral-700: #1f1f1f;
     --clr-neutral-800: #050505;
 
+    --clr-accent-200: #e5c3ff;
     --clr-accent-300: #a445ed40;
     --clr-accent-400: #a445ed;
     --clr-accent-500: #8f19e8;
@@ -32,14 +33,19 @@ const GlobalStyles = createGlobalStyle`
     --ff-sans: 'Inter', sans-serif;
     --ff-serif: 'Lora', serif;
     --ff-mono: 'Inconsolata', monospace;
+
+    --fs-small: 0.9375rem;
+    --fs-base: clamp(0.9375rem, calc(0.76rem + 0.76vw), 1.125rem);
+    --fs-medium: clamp(1.00rem, calc(0.76rem + 1.02vw), 1.25rem);
+    --fs-large: clamp(1.125rem, calc(0.77rem + 1.53vw), 1.5rem);
+    --fs-huge: clamp(2rem, calc(0.09rem + 8.14vw), 4rem);
   }
 
   /* COLOR THEME */
   html,
   html[data-theme='light'] {
     --clr-bg: var(--clr-neutral-100);
-    --clr-title: var(--clr-neutral-600);
-    --clr-body: var(--clr-neutral-400);
+    --clr-body: var(--clr-neutral-600);
     --clr-input: var(--clr-neutral-200);
     --clr-highlight: var(--clr-accent-400);
     --clr-line: var(--clr-neutral-300);
@@ -52,8 +58,7 @@ const GlobalStyles = createGlobalStyle`
 
   html[data-theme='dark'] {
     --clr-bg: var(--clr-neutral-800);
-    --clr-title: var(--clr-neutral-100);
-    --clr-body: var(--clr-neutral-400);
+    --clr-body: var(--clr-neutral-100);
     --clr-input: var(--clr-neutral-700);
     --clr-highlight: var(--clr-accent-400);
     --clr-line: var(--clr-neutral-500);
@@ -97,19 +102,14 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
 
     font-family: var(--font);
-    font-size: 0.9375rem;
+    font-size: var(--fs-base);
     font-weight: 400;
-    line-height: 1.3333;
     text-rendering: optimizeSpeed;
 
     background-color: var(--clr-bg);
     color: var(--clr-body);
 
     transition: color 0.5s ease-out, background-color 0.5s ease-out;
-  
-    @media only screen and (min-width: 40em) {
-      font-size: 1.125rem;
-    }
   }
 
   /* Set core root defaults */
@@ -149,8 +149,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::selection {
-    background-color: var(--clr-accent-400);
-    color: var(--clr-neutral-100);
+    background-color: var(--clr-accent-200);
+    color: var(--clr-neutral-600);
   }
 
   /* UTILITIES CLASSES */

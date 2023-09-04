@@ -1,4 +1,4 @@
-header {
+/* header {
   display: grid;
   grid-template-columns: max-content 1fr;
   align-items: center;
@@ -40,4 +40,4 @@ header > img {
 
 .search-bar {
   grid-column: 1 / -1;
-}
+} */

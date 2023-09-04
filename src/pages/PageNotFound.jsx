@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link, useRouteError } from 'react-router-dom';
 import { Frown } from 'lucide-react';
+import Heading from '../ui/Heading';
 
 const StyledPageNotFound = styled.div`
   display: flex;
@@ -19,12 +20,7 @@ const StyledPageNotFound = styled.div`
     display: block;
     height: 3rem;
     width: 3rem;
-  }
-
-  h1 {
-    font-size: 1.125rem;
-    font-weight: 700;
-    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   @media only screen and (min-width: 40em) {
@@ -33,11 +29,6 @@ const StyledPageNotFound = styled.div`
     svg {
       width: 4rem;
       height: 4rem;
-    }
-
-    h1 {
-      font-size: 1.25rem;
-      color: var(--clr-title);
     }
 
     p {
@@ -76,7 +67,9 @@ function PageNotFound() {
   return (
     <StyledPageNotFound>
       <Frown color="#a445ed" strokeWidth={1.5} />
-      <h1>{title}</h1>
+      <Heading as="h3" $emphasis={true}>
+        {title}
+      </Heading>
       <p>
         <span>{message}</span>
         <span>{resolution}</span>

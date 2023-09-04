@@ -7,7 +7,6 @@ import Controls from './Controls';
 
 const StyledHeader = styled.header`
   background-color: var(--clr-bg);
-  color: var(--clr-title);
   display: grid;
   grid-template-columns: initial;
   padding-block: 1.5rem;
