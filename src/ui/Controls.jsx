@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import ThemeColor from '../feature/theme/ThemeColor';
+import ThemeFont from '../feature/theme/ThemeFont';
 
 const StyledControls = styled.div`
   display: flex;
@@ -15,8 +17,8 @@ const StyledControls = styled.div`
 function Controls() {
   return (
     <StyledControls>
-      <span>Font control</span>
-      <span>Theme control</span>
+      <ThemeFont />
+      <ThemeColor />
     </StyledControls>
   );
 }

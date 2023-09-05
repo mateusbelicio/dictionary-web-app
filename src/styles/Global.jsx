@@ -50,6 +50,7 @@ const GlobalStyles = createGlobalStyle`
     --clr-highlight: var(--clr-accent-400);
     --clr-line: var(--clr-neutral-300);
     --clr-gray: var(--clr-neutral-400);
+    --clr-modal: var(--clr-neutral-100);
     --clr-backdrop: rgba(0, 0, 0, 0.1);
 
     --shadow: 0 5px 1.875rem rgba(0, 0, 0, 0.1);
@@ -63,6 +64,7 @@ const GlobalStyles = createGlobalStyle`
     --clr-highlight: var(--clr-accent-400);
     --clr-line: var(--clr-neutral-500);
     --clr-gray: var(--clr-neutral-400);
+    --clr-modal: var(--clr-neutral-700);
     --clr-backdrop: rgba(255, 255, 255, 0.1);
 
     --shadow: 0 5px 1.875rem var(--clr-accent-400);
@@ -109,7 +111,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--clr-bg);
     color: var(--clr-body);
 
-    transition: color 0.5s ease-out, background-color 0.5s ease-out;
+    ${'' /* transition: color 0.5s ease-out, background-color 0.5s ease-out; */}
   }
 
   /* Set core root defaults */

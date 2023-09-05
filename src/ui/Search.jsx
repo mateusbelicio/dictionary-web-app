@@ -119,7 +119,7 @@ function Search() {
   };
 
   return (
-    <StyledSearch onSubmit={handleSubmit}>
+    <StyledSearch onSubmit={handleSubmit} autoComplete="off">
       <input
         type="text"
         id="search"
