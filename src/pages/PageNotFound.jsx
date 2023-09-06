@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { Link, useRouteError } from 'react-router-dom';
 import { Frown } from 'lucide-react';
+import { Link, useRouteError } from 'react-router-dom';
+
 import Heading from '../ui/Heading';
 
 const StyledPageNotFound = styled.div`

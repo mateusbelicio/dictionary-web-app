@@ -35,6 +35,7 @@ const StyledSearch = styled.form`
     font-weight: 700;
     padding: var(--padding-block) var(--padding-right) var(--padding-block) var(--padding-left);
     text-transform: lowercase;
+    transition: background-color 0.3s;
 
     &:focus-visible {
       outline: 1px solid var(--clr-accent-400);
@@ -99,7 +100,7 @@ const StyledSearch = styled.form`
 `;
 
 function Search() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState('keyboard');
   const [isInvalid, setIsInvalid] = useState(false);
   const submit = useSubmit();
 
@@ -110,6 +111,7 @@ function Search() {
     const searchParams = new URLSearchParams();
     searchParams.append('q', query);
 
+    setQuery('');
     submit(searchParams, { method: 'GET', action: '/search' });
   };
 

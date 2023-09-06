@@ -5,9 +5,9 @@ import { fetchWord } from '../utils/fetchWord';
 import { getStructuredWordData } from '../utils/getStructuredWordData';
 
 import Loader from '../ui/Loader';
-import WordHeader from '../feature/word/WordHeader';
-import WordMeaningSection from '../feature/word/WordMeaningSection';
-import WordSource from '../feature/word/WordSource';
+import WordHeader from '../features/word/WordHeader';
+import WordMeaningSection from '../features/word/WordMeaningSection';
+import WordSource from '../features/word/WordSource';
 
 const StyledWord = styled.main`
   display: grid;

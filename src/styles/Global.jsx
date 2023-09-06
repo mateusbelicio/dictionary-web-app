@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
+import fontDeclarations from './Fonts';
+
 const GlobalStyles = createGlobalStyle`
+  ${fontDeclarations};
+
   html {
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -30,9 +34,14 @@ const GlobalStyles = createGlobalStyle`
 
     --clr-error-400: #ff5252;
 
-    --ff-sans: 'Inter', sans-serif;
+    --ff-sans: 'Inter';
+    --ff-serif: 'Lora';
+    --ff-mono: 'Inconsolata';
+    ${
+      '' /* --ff-sans: 'Inter', sans-serif;
     --ff-serif: 'Lora', serif;
-    --ff-mono: 'Inconsolata', monospace;
+    --ff-mono: 'Inconsolata', monospace; */
+    }
 
     --fs-small: 0.9375rem;
     --fs-base: clamp(0.9375rem, calc(0.76rem + 0.76vw), 1.125rem);
@@ -92,8 +101,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    transition: color 0.3s, background-color 0.3s;
   }
 
   #root {
@@ -110,8 +117,7 @@ const GlobalStyles = createGlobalStyle`
 
     background-color: var(--clr-bg);
     color: var(--clr-body);
-
-    ${'' /* transition: color 0.5s ease-out, background-color 0.5s ease-out; */}
+    transition: color 0.3s, background-color 0.3s;
   }
 
   /* Set core root defaults */

@@ -33,7 +33,7 @@ const DefinitionsItem = styled.li`
     color: var(--clr-highlight);
   }
 
-  & > :last-child {
+  & > :not(:first-child) {
     margin-top: 0.8125rem;
 
     &::before {

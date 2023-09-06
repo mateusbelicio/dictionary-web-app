@@ -18,6 +18,8 @@ const Title = styled(Heading)`
   align-items: center;
   gap: 1rem;
 
+  font-style: italic;
+
   &::after {
     content: '';
     width: 100%;

@@ -9,6 +9,11 @@ const StyledLinkButton = styled(Text)`
   &:hover {
     text-decoration: underline;
   }
+
+  &:focus-visible {
+    outline: 1px solid var(--clr-highlight);
+    outline-offset: 2px;
+  }
 `;
 
 function LinkButton({ children, to }) {

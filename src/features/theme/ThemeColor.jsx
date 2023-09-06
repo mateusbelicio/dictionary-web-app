@@ -23,12 +23,13 @@ const StyledThemeColor = styled.div`
 
   input {
     appearance: none;
-    input:focus-visible {
+
+    &:focus-visible {
       outline: none;
     }
 
     &:focus-visible + label {
-      outline: 2px dashed blueviolet;
+      outline: 1px solid blueviolet;
       outline-offset: 3px;
     }
 
@@ -55,8 +56,6 @@ const StyledThemeColor = styled.div`
     user-select: none;
     cursor: pointer;
 
-    transition: background-color 0.2s;
-
     &::after {
       content: '';
       position: absolute;
@@ -66,7 +65,7 @@ const StyledThemeColor = styled.div`
       background-color: white;
       border-radius: inherit;
 
-      transition: width 0.2s;
+      transition: all 0.2s;
     }
 
     &:active::after {

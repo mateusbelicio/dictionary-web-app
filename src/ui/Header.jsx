@@ -6,7 +6,7 @@ import Search from './Search';
 import Controls from './Controls';
 
 const StyledHeader = styled.header`
-  background-color: var(--clr-bg);
+  /* background-color: var(--clr-bg); */
   display: grid;
   grid-template-columns: initial;
   padding-block: 1.5rem;
