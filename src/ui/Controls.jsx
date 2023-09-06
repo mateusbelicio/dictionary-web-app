@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import ThemeColor from '../feature/theme/ThemeColor';
-import ThemeFont from '../feature/theme/ThemeFont';
+import ThemeColor from '../features/theme/ThemeColor';
+import ThemeFont from '../features/theme/ThemeFont';
 
 const StyledControls = styled.div`
   display: flex;
