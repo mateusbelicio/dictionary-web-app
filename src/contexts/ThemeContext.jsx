@@ -2,10 +2,12 @@ import { createContext, useContext, useEffect, useReducer } from 'react';
 
 const ThemeContext = createContext(null);
 
-const initialState = JSON.parse(localStorage.getItem('theme')) || {
-  font: 'serif',
-  color: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
-};
+const initialState = localStorage.getItem('theme')
+  ? JSON.parse(localStorage.getItem('theme'))
+  : {
+      font: 'serif',
+      color: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
+    };
 
 function reducer(state, action) {
   switch (action.type) {

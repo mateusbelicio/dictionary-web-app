@@ -1,36 +1,36 @@
 import { css } from 'styled-components';
 
-import LoraBoldItalicWOFF2 from '../fonts/Lora-BoldItalic.woff2';
-import LoraBoldItalicWOFF from '../fonts/Lora-BoldItalic.woff';
-import LoraBoldItalicTTF from '../fonts/Lora-BoldItalic.ttf';
+import LoraBoldItalicWOFF2 from '../assets/fonts/Lora-BoldItalic.woff2';
+import LoraBoldItalicWOFF from '../assets/fonts/Lora-BoldItalic.woff';
+import LoraBoldItalicTTF from '../assets/fonts/Lora-BoldItalic.ttf';
 
-import LoraBoldWOFF2 from '../fonts/Lora-Bold.woff2';
-import LoraBoldWOFF from '../fonts/Lora-Bold.woff';
-import LoraBoldTTF from '../fonts/Lora-Bold.ttf';
+import LoraBoldWOFF2 from '../assets/fonts/Lora-Bold.woff2';
+import LoraBoldWOFF from '../assets/fonts/Lora-Bold.woff';
+import LoraBoldTTF from '../assets/fonts/Lora-Bold.ttf';
 
-import LoraRegularWOFF2 from '../fonts/Lora-Regular.woff2';
-import LoraRegularWOFF from '../fonts/Lora-Regular.woff';
-import LoraRegularTTF from '../fonts/Lora-Regular.ttf';
+import LoraRegularWOFF2 from '../assets/fonts/Lora-Regular.woff2';
+import LoraRegularWOFF from '../assets/fonts/Lora-Regular.woff';
+import LoraRegularTTF from '../assets/fonts/Lora-Regular.ttf';
 
-import InterRegularWOFF2 from '../fonts/Inter-Regular.woff2';
-import InterRegularWOFF from '../fonts/Inter-Regular.woff';
-import InterRegularTTF from '../fonts/Inter-Regular.ttf';
+import InterRegularWOFF2 from '../assets/fonts/Inter-Regular.woff2';
+import InterRegularWOFF from '../assets/fonts/Inter-Regular.woff';
+import InterRegularTTF from '../assets/fonts/Inter-Regular.ttf';
 
-import InterBoldWOFF2 from '../fonts/Inter-Bold.woff2';
-import InterBoldWOFF from '../fonts/Inter-Bold.woff';
-import InterBoldTTF from '../fonts/Inter-Bold.ttf';
+import InterBoldWOFF2 from '../assets/fonts/Inter-Bold.woff2';
+import InterBoldWOFF from '../assets/fonts/Inter-Bold.woff';
+import InterBoldTTF from '../assets/fonts/Inter-Bold.ttf';
 
-import InterBoldItalicWOFF2 from '../fonts/Inter-BoldItalic.woff2';
-import InterBoldItalicWOFF from '../fonts/Inter-BoldItalic.woff';
-import InterBoldItalicTTF from '../fonts/Inter-BoldItalic.ttf';
+import InterBoldItalicWOFF2 from '../assets/fonts/Inter-BoldItalic.woff2';
+import InterBoldItalicWOFF from '../assets/fonts/Inter-BoldItalic.woff';
+import InterBoldItalicTTF from '../assets/fonts/Inter-BoldItalic.ttf';
 
-import InconsolataRegularWOFF2 from '../fonts/Inconsolata-Regular.woff2';
-import InconsolataRegularWOFF from '../fonts/Inconsolata-Regular.woff';
-import InconsolataRegularTTF from '../fonts/Inconsolata-Regular.ttf';
+import InconsolataRegularWOFF2 from '../assets/fonts/Inconsolata-Regular.woff2';
+import InconsolataRegularWOFF from '../assets/fonts/Inconsolata-Regular.woff';
+import InconsolataRegularTTF from '../assets/fonts/Inconsolata-Regular.ttf';
 
-import InconsolataBoldWOFF2 from '../fonts/Inconsolata-Bold.woff2';
-import InconsolataBoldWOFF from '../fonts/Inconsolata-Bold.woff';
-import InconsolataBoldTTF from '../fonts/Inconsolata-Bold.ttf';
+import InconsolataBoldWOFF2 from '../assets/fonts/Inconsolata-Bold.woff2';
+import InconsolataBoldWOFF from '../assets/fonts/Inconsolata-Bold.woff';
+import InconsolataBoldTTF from '../assets/fonts/Inconsolata-Bold.ttf';
 
 const fontDeclarations = css`
   @font-face {

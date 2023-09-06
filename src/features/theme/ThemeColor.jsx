@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { useTheme } from '../../contexts/ThemeContext';
 
-import icons from '/icons.svg';
+import icons from '../../assets/icons.svg';
 
 const StyledThemeColor = styled.div`
   display: flex;

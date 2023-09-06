@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSubmit } from 'react-router-dom';
 import styled from 'styled-components';
 
-import icons from '/icons.svg';
+import icons from '../assets/icons.svg';
 
 const StyledSearch = styled.form`
   --padding-left: 1.5rem;
@@ -100,7 +100,7 @@ const StyledSearch = styled.form`
 `;
 
 function Search() {
-  const [query, setQuery] = useState('keyboard');
+  const [query, setQuery] = useState('');
   const [isInvalid, setIsInvalid] = useState(false);
   const submit = useSubmit();
 

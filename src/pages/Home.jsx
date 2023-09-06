@@ -1,9 +1,9 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
+
 import Logo from '../ui/Logo';
 import Heading from '../ui/Heading';
 import Text from '../ui/Text';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
 const StyledHome = styled.div`
   display: flex;
@@ -35,12 +35,6 @@ const StyledHome = styled.div`
 `;
 
 function Home() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate('search?q=keyboard');
-  }, [navigate]);
-
   return (
     <StyledHome>
       <Logo />

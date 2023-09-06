@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import logoImage from '../assets/logo.svg';
+
 const StyledLogo = styled(Link)`
   img {
     height: 2rem;
@@ -18,7 +20,7 @@ const StyledLogo = styled(Link)`
 function Logo() {
   return (
     <StyledLogo to="/">
-      <img src="/logo.svg" alt="Dictionary web app logo" />
+      <img src={logoImage} alt="Dictionary web app logo" />
     </StyledLogo>
   );
 }
