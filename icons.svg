@@ -1,0 +1,35 @@
+<svg width="0" height="0" class="hidden">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" id="icon-moon-highlight">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 10.449C0.998458 12.8283 1.80169 15.1383 3.27914 17.0033C4.75659 18.8683 6.82139 20.1788 9.13799 20.7218C11.4545 21.2647 13.8866 21.0082 16.039 19.994C18.1912 18.9797 19.9373 17.2673 20.9931 15.1352C11.5442 15.1352 6.85799 10.4479 6.85799 1C5.09842 1.87311 3.61767 3.22033 2.58266 4.88981C1.54765 6.5593 0.999502 8.48469 1 10.449Z" stroke="#A445ED" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="icon-new-window">
+    <path fill="none" stroke="#838383" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.09 3.545H2.456A1.455 1.455 0 0 0 1 5v6.545A1.455 1.455 0 0 0 2.455 13H9a1.455 1.455 0 0 0 1.455-1.455V7.91m-5.091.727 7.272-7.272m0 0H9m3.636 0V5"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="icon-search">
+    <path fill="none" stroke="#A445ED" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.663 12.663 3.887 3.887M1 7.664a6.665 6.665 0 1 0 13.33 0 6.665 6.665 0 0 0-13.33 0Z"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" id="icon-spinner">
+    <rect x="28.1338" width="4.01905" height="15.215" rx="2.00953" fill="#A445ED"></rect>
+    <rect x="10.3379" y="52.4943" width="4.01905" height="15.215" rx="2.00953" transform="rotate(-135.654 10.3379 52.4943)" fill="#A445ED"></rect>
+    <rect x="1.90723" y="20.0299" width="4.01905" height="15.215" rx="2.00953" transform="rotate(-65.8248 1.90723 20.0299)" fill="#A445ED"></rect>
+    <rect x="43.0938" y="56.5018" width="4.01905" height="15.215" rx="2.00953" transform="rotate(158.521 43.0938 56.5018)" fill="#A445ED"></rect>
+    <rect x="57.0254" y="16.8656" width="4.01905" height="15.215" rx="2.00953" transform="rotate(70.0428 57.0254 16.8656)" fill="#A445ED"></rect>
+    <rect x="16.9375" y="2.93517" width="4.01905" height="15.215" rx="2.00953" transform="rotate(-21.9111 16.9375 2.93517)" fill="#A445ED"></rect>
+    <rect x="20.3965" y="58.2211" width="4.01905" height="15.215" rx="2.00953" transform="rotate(-157.565 20.3965 58.2211)" fill="#A445ED"></rect>
+    <rect x="52.4375" y="49.671" width="4.01905" height="15.215" rx="2.00953" transform="rotate(136.61 52.4375 49.671)" fill="#A445ED"></rect>
+    <rect y="31.4459" width="4.01905" height="15.215" rx="2.00953" transform="rotate(-87.7359 0 31.4459)" fill="#A445ED"></rect>
+    <rect x="32.1309" y="59.7683" width="4.01905" height="15.215" rx="2.00953" transform="rotate(179.096 32.1309 59.7683)" fill="#A445ED"></rect>
+    <rect x="50.4453" y="7.34367" width="4.01905" height="15.215" rx="2.00953" transform="rotate(48.1317 50.4453 7.34367)" fill="#A445ED"></rect>
+    <rect x="58.6543" y="39.599" width="4.01905" height="15.215" rx="2.00953" transform="rotate(113.271 58.6543 39.599)" fill="#A445ED"></rect>
+    <rect x="7.46387" y="10.0311" width="4.01905" height="15.215" rx="2.00953" transform="rotate(-45.2498 7.46387 10.0311)" fill="#A445ED"></rect>
+    <rect x="60" y="27.9112" width="4.01905" height="15.215" rx="2.00953" transform="rotate(90.6179 60 27.9112)" fill="#A445ED"></rect>
+    <rect x="2.59375" y="42.9946" width="4.01905" height="15.215" rx="2.00953" transform="rotate(-111.075 2.59375 42.9946)" fill="#A445ED"></rect>
+    <rect x="40.542" y="0.861221" width="4.01905" height="15.215" rx="2.00953" transform="rotate(24.793 40.542 0.861221)" fill="#A445ED"></rect>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8" id="icon-arrow-down">
+    <path fill="none" stroke="#A445ED" stroke-width="1.5" d="m1 1 6 6 6-6"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" id="icon-moon">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"></path>
+  </symbol>
+</svg>
